@@ -1,3 +1,4 @@
+<!-- eslint-disable import/no-unresolved -->
 <template>
   <section>
     <h1>👍 Compre ou Venda 👎</h1>
@@ -7,7 +8,9 @@
 </template>
 
 <script>
+// eslint-disable-next-line import/no-unresolved
 import ProdutosBuscar from '@/components/ProdutosBuscar.vue';
+// eslint-disable-next-line import/no-unresolved
 import ProdutosLista from '@/components/ProdutosLista.vue';
 
 export default {
