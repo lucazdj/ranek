@@ -1,8 +1,7 @@
 <template>
   <div>
-    <p>Paginas {{ produtosPorPagina }} {{ produtosTotal }}</p>
     <ul>
-      <li v-for="pagina in paginasTotal" :key="pagina">
+      <li v-for="pagina in paginas" :key="pagina">
         <router-link :to="{ query: query(pagina) }">{{ pagina }}</router-link>
       </li>
     </ul>
@@ -30,6 +29,24 @@ export default {
     },
   },
   computed: {
+    paginas() {
+      // eslint-disable-next-line no-underscore-dangle
+      const current = Number(this.$route.query._page);
+      const range = 9;
+      const offset = Math.ceil(range / 2);
+      const total = this.paginasTotal;
+      const pagesArray = [];
+
+      // eslint-disable-next-line no-plusplus
+      for (let i = 1; i <= total; i++) {
+        pagesArray.push(i);
+      }
+
+      pagesArray.splice(0, current - offset);
+      pagesArray.splice(range, total);
+
+      return pagesArray;
+    },
     paginasTotal() {
       const total = this.produtosTotal / this.produtosPorPagina;
       return total !== Infinity ? Math.ceil(total) : 0;
@@ -38,8 +55,8 @@ export default {
 };
 </script>
 
-<style>
-ul {
+<style scoped>
+div {
   grid-column: 1 / -1;
 }
 
