@@ -9,10 +9,9 @@ Vue.config.productionTip = false;
 Vue.component('PaginaCarregando', PaginaCarregando);
 
 Vue.filter('numeroPreco', (valor) => {
-  // eslint-disable-next-line no-param-reassign
-  valor = Number(valor);
-  if (Number.isNaN(valor)) {
-    return valor.toLocaleString('pt-BR', {
+  const newValor = Number(valor);
+  if (!Number.isNaN(newValor)) {
+    return newValor.toLocaleString('pt-BR', {
       style: 'currency',
       currency: 'BRL',
     });

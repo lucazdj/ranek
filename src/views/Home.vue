@@ -15,7 +15,7 @@ import ProdutosLista from '@/components/ProdutosLista.vue';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'home',
+  name: 'Home',
   components: {
     ProdutosBuscar,
     ProdutosLista,

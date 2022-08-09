@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     <TheHeader />
-    <main id="main">
-      <router-view />
-    </main>
+    <transition mode="out-in">
+      <main id="main">
+        <router-view />
+      </main>
+    </transition>
     <TheFooter />
   </div>
 </template>

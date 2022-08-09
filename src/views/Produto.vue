@@ -11,7 +11,7 @@
         <p class="preco">{{ produto.preco | numeroPreco }}</p>
         <p class="descricao">{{ produto.descricao }}</p>
         <button class="btn" v-if="produto.vendido === 'false'">Comprar</button>
-        <button v-else class="btn" disabled>Produt vendido</button>
+        <button v-else class="btn" disabled>Produto vendido</button>
       </div>
     </div>
     <PaginaCarregando v-else />
@@ -23,7 +23,7 @@ import { api } from '@/services';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Produtos',
+  name: 'Produto',
   props: ['id'],
   data() {
     return {
@@ -32,10 +32,10 @@ export default {
   },
   methods: {
     getProduto() {
+      this.produto = null;
       api.get(`/produto/${this.id}`).then((response) => {
         this.produto = response.data;
       });
-      console.log(this.id);
     },
   },
   created() {
