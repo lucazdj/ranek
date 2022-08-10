@@ -10,6 +10,54 @@
       "numero": "25",
       "estado": "RJ",
       "cidade": "Rio de Janeiro"
+    },
+    {
+      "id": "admin",
+      "nome": "User",
+      "email": "admin",
+      "senha": "123",
+      "cep": "12345678",
+      "rua": "Rua Ali Perto",
+      "numero": "25",
+      "bairro": "Cidade Nova",
+      "cidade": "Rio de Janeiro",
+      "estado": "RJ"
+    },
+    {
+      "id": "A",
+      "nome": "A",
+      "email": "A",
+      "senha": "123",
+      "cep": "69097139 ",
+      "rua": "Rua Guararama",
+      "numero": "25",
+      "bairro": "Cidade Nova",
+      "cidade": "Manaus",
+      "estado": "AM"
+    },
+    {
+      "id": "eu",
+      "nome": "eu",
+      "email": "eu",
+      "senha": "a",
+      "cep": "69097139 ",
+      "rua": "Rua Guararama",
+      "numero": "23",
+      "bairro": "Cidade Nova",
+      "cidade": "Manaus",
+      "estado": "AM"
+    },
+    {
+      "id": "ty",
+      "nome": "ty",
+      "email": "ty",
+      "senha": "a",
+      "cep": "69097139 ",
+      "rua": "Rua Guararama",
+      "numero": "a",
+      "bairro": "Cidade Nova",
+      "cidade": "Manaus",
+      "estado": "AM"
     }
   ],
   "produto": [
@@ -363,6 +411,22 @@
       "vendido": "false",
       "descricao": "Esse é um novo tablet.",
       "fotos": null
+    },
+    {
+      "nome": "A",
+      "preco": "150",
+      "descricao": "A",
+      "fotos": null,
+      "usuario_id": "admin",
+      "id": "FDgIMp4"
+    },
+    {
+      "nome": "Produto",
+      "preco": "2500",
+      "descricao": "Produto",
+      "fotos": null,
+      "usuario_id": "admin",
+      "id": "X0MWWTv"
     }
   ]
 }

@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable guard-for-in */
 /* eslint-disable import/prefer-default-export */
@@ -7,4 +8,20 @@ export function serialize(obj) {
     queryString += `&${key}=${obj[key]}`;
   }
   return queryString;
+}
+
+export function mapFields(options) {
+  const object = {};
+  for (let x = 0; x < options.fields.length; x++) {
+    const field = [options.fields[x]];
+    object[field] = {
+      get() {
+        return this.$store.state[options.base][field];
+      },
+      set(value) {
+        this.$store.commit(options.mutation, { [field]: value });
+      },
+    };
+  }
+  return object;
 }
